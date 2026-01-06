@@ -1,0 +1,41 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'PulseTrack - Analytics Platform' } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <slot name="head" />
+  </head>
+  <body class="min-h-screen bg-white text-gray-900 antialiased">
+    <slot />
+
+    <script src="https://cdn.jsdelivr.net/gh/Chikavi1/pulsetrack@master/dist/pulsetrack.umd.min.js"></script>
+    <script type="module">
+      window.addEventListener('load', () => {
+  // ⚡ Acceder a la propiedad PulseTrack dentro del objeto global
+  const pt = window.PulseTrack?.PulseTrack;
+  if (!pt) return;
+
+  pt.init({
+    businessId: '080fbac4-2aa8-4016-89ee-e339bd3c1c16'
+  });
+
+ 
+});
+
+</script>
+
+  </body>
+</html>

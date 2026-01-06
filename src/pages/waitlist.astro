@@ -1,0 +1,10 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import WaitlistForm from "../components/WaitlistForm.astro";
+---
+
+<BaseLayout title="Lista de espera - PulseTrack">
+  <main class="min-h-screen flex items-center justify-center bg-gray-50">
+    <WaitlistForm client:load />
+  </main>
+</BaseLayout>
