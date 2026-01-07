@@ -5,7 +5,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
  
 
-<BaseLayout title="PulseTrack - Análisis en Tiempo Real">
+<BaseLayout title="PulseTrack - Comprende a tus usuarios">
   <main>
     <!-- Navegación -->
     <nav class="fixed w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-200">
@@ -17,7 +17,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                         <a href="#features" class="text-gray-600 hover:text-gray-900 transition">Beneficios</a>
                         <a href="#sdk" class="text-gray-600 hover:text-gray-900 transition">Integración</a>
                         <a href="#pricing" class="text-gray-600 hover:text-gray-900 transition">Precios</a>
-                        <a target="_blank" href="https://docs-pt.netlify.app/" class="text-gray-600 hover:text-gray-900 transition">Documentación</a>
+                        <a target="_blank" href="https://docs.rojastudio.xyz/" class="text-gray-600 hover:text-gray-900 transition">Documentación</a>
                     </div>
                 </div>
                 <div class="flex items-center space-x-4">
@@ -36,7 +36,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <div class="text-center max-w-4xl mx-auto">
                 <div class="inline-flex items-center space-x-2 bg-gray-100 rounded-full px-4 py-2 text-sm mb-8">
                     <span class="w-2 h-2 bg-green-500 rounded-full"></span>
-                    <span class="text-gray-700">¡Ahora con reproducción de sesiones en tiempo real!</span>
+                    <span class="text-gray-700">¡Pruebalo gratis!</span>
                 </div>
                 <h1 class="text-6xl lg:text-7xl font-bold tracking-tight mb-6 leading-tight">
                     Comprende a tus usuarios.<br/>
@@ -254,7 +254,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                             <span class="text-gray-300">Lógica de reintento y procesamiento por lotes integrada</span>
                         </li>
                     </ul>
-                    <a href="#docs" class="inline-flex items-center text-white hover:text-gray-300 transition">
+                    <a target="_blank" href="https://docs.rojastudio.xyz/" class="inline-flex items-center text-white hover:text-gray-300 transition">
                         <span class="font-medium">Ver documentación</span>
                         <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
@@ -274,28 +274,28 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                         </div>
                         <div class="p-6 font-mono text-sm overflow-x-auto">
 												<pre class="text-gray-300"><code class="language-javascript">
-					{`import PulseTrack from '@PulseTrack/sdk';
+{`import PulseTrack from '@PulseTrack/sdk';
 
-					// Initialize the SDK
-					const tracker = PulseTrack.init({
-					apiKey: 'your_api_key',
-					options: {
-						autoTrack: true,
-						enableSessionReplay: true
-					}
-					});
+// Initialize the SDK
+const tracker = PulseTrack.init({
+    businessID: 'your_business_id',
+    options: {
+        autoTrack: true,
+        enableSessionReplay: true
+    }
+});
 
-					// Track custom events
-					tracker.track('button_clicked', {
-					button_id: 'signup',
-					page: 'homepage'
-					});
+// Track custom events
+tracker.track('button_clicked', {
+    button_id: 'signup',
+    page: 'homepage'
+});
 
-					// Identify users
-					tracker.identify('user_123', {
-					email: 'user@example.com',
-					plan: 'pro'
-					});`}
+// Identify users
+tracker.identify('user_123', {
+    email: 'user@example.com',
+    plan: 'pro'
+});`}
                             </code></pre>
                         </div>
                     </div>
@@ -325,7 +325,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <div class="text-center mb-20">
                 <h2 class="text-5xl font-bold mb-6">Diseñado para equipos de producto modernos</h2>
                 <p class="text-xl text-gray-600">
-                    Información en tiempo real que impulsa decisiones
+                    Información que impulsa decisiones
                 </p>
             </div>
 
@@ -704,54 +704,57 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                     </div> -->
                 </div>
 
-                <!-- Product -->
                 <div>
-                    <h3 class="font-semibold text-gray-900 mb-4">Producto</h3>
-                    <ul class="space-y-3 text-sm">
-                        <li><a href="#" class="text-gray-600 hover:text-gray-900 transition">Características</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-gray-900 transition">Integraciones</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-gray-900 transition">Precios</a></li>
-                    </ul>
+
                 </div>
 
-                <!-- Company -->
+                <!-- Product -->
+                <!-- <div>
+                    <h3 class="font-semibold text-gray-900 mb-4">Producto</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#features" class="text-gray-600 hover:text-gray-900 transition">Características</a></li>
+                        <li><a href="#sdk" class="text-gray-600 hover:text-gray-900 transition">Integraciones</a></li>
+                        <li><a href="#pricing" class="text-gray-600 hover:text-gray-900 transition">Precios</a></li>
+                    </ul>
+                </div> -->
+
+                <!-- Company  
                 <div>
-                    <h3 class="font-semibold text-gray-900 mb-4">Empresa</h3>
+                      <h3 class="font-semibold text-gray-900 mb-4">Empresa</h3>
                     <ul class="space-y-3 text-sm">
                         <li><a href="#" class="text-gray-600 hover:text-gray-900 transition">Sobre nosotros</a></li>
                         <li><a href="#" class="text-gray-600 hover:text-gray-900 transition">Blog</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-gray-900 transition">Trabajos</a></li>
-                      </ul>
-                </div>
+                    </ul>
+                </div> -->
 
                 <!-- Resources -->
-                <div>
+                <!-- <div>
                     <h3 class="font-semibold text-gray-900 mb-4">Recursos</h3>
                     <ul class="space-y-3 text-sm">
                         <li><a  href="https://docs-pt.netlify.app/" target="_blank" class="text-gray-600 hover:text-gray-900 transition">Documentación</a></li>
-                         <li><a href="/guides" class="text-gray-600 hover:text-gray-900 transition">Guías</a></li>
-                        <li><a href="/support" class="text-gray-600 hover:text-gray-900 transition">Soporte</a></li>
+                           <li><a href="/guides" class="text-gray-600 hover:text-gray-900 transition">Guías</a></li>
+                         <li><a href="/support" class="text-gray-600 hover:text-gray-900 transition">Soporte</a></li> 
                     </ul>
-                </div>
+                </div> -->
 
                 <!-- Legal -->
-                <div>
+                <!-- <div>
                     <h3 class="font-semibold text-gray-900 mb-4">Legal</h3>
                     <ul class="space-y-3 text-sm">
                         <li><a href="#" class="text-gray-600 hover:text-gray-900 transition">Privacidad</a></li>
                         <li><a href="#" class="text-gray-600 hover:text-gray-900 transition">Términos</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-gray-900 transition">Seguridad</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-gray-900 transition">Cumplimiento</a></li>
-                        <!-- <li><a href="#" class="text-gray-600 hover:text-gray-900 transition">GDPR</a></li> -->
+  <li><a href="#" class="text-gray-600 hover:text-gray-900 transition">Seguridad</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-gray-900 transition">Cumplimiento</a></li> 
+                         <li><a href="#" class="text-gray-600 hover:text-gray-900 transition">GDPR</a></li> 
                     </ul>
-                </div>
+                </div> -->
             </div>
 
             <!-- Bottom Footer -->
             <div class="pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center">
                 <p class="text-sm text-gray-600">© 2025 PulseTrack, Inc. Todos los derechos reservados.</p>
                 <div class="flex items-center space-x-6 mt-4 md:mt-0">
-                    <a href="/status" class="text-sm text-gray-600 hover:text-gray-900 transition">Estado</a>
+                    <a href="https://app.upple.io/status/pulsetrack" target="_blank" class="text-sm text-gray-600 hover:text-gray-900 transition">Estado</a>
                     <a href="/privacy" class="text-sm text-gray-600 hover:text-gray-900 transition">Privacidad</a>
                     <a href="/terms" class="text-sm text-gray-600 hover:text-gray-900 transition">Términos</a>
                 </div>

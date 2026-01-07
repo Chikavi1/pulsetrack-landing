@@ -1,0 +1,35 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://pulsetrack.vercel.app/sitemap.xml
+
+# Disallow crawling of admin and API routes
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+
+# Allow all bots to crawl the website
+Crawl-delay: 10
+
+# Social media bots
+User-agent: Twitterbot
+Allow: /
+Crawl-delay: 5
+
+User-agent: LinkedInBot
+Allow: /
+Crawl-delay: 5
+
+User-agent: Facebot
+Allow: /
+Crawl-delay: 5
+
+# Image and media bots
+User-agent: Googlebot-Image
+Allow: /*.jpg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.webp$
+Crawl-delay: 5
